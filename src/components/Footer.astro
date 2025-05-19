@@ -3,7 +3,7 @@ const today = new Date();
 import { Icon } from 'astro-icon/components'
 ---
 
-<footer>
+<footer class = "site-footer">
 	&copy; {today.getFullYear()} Ted Paek. All rights reserved.
 	<div class="social-links">
 		<a class="youtube" href="https://www.youtube.com/@ted-tech-tips" target="_blank">
@@ -22,12 +22,29 @@ import { Icon } from 'astro-icon/components'
 </footer>
 
 <style>
-  	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-  	}
+	footer {
+	position: relative;
+	padding: 2em 1em 6em;
+	background: linear-gradient(var(--gray-gradient));
+	color: rgb(var(--gray));
+	text-align: center;
+	overflow: hidden;
+	}
+
+	footer::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: url('/patterns/footer-pattern.svg') repeat;
+	opacity: 0.03;        
+	z-index: 1;
+	}
+	footer > * {
+	position: relative;
+	z-index: 2;
+	}
+
+
 	.social-links {
 		display: flex;
 		justify-content: center;
@@ -48,7 +65,7 @@ import { Icon } from 'astro-icon/components'
 		color: currentColor;
 		transition: color 200ms ease-in-out, transform 200ms ease-in-out;
 	}
-	
+
 	.social-links a:hover .icon {
 		transform: scale(1.1);
 	}

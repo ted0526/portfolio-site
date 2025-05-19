@@ -9,20 +9,20 @@ import { Icon } from 'astro-icon/components'
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/projects">Projects</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
 		<div class="social-links">
-			<a href="https://www.youtube.com/@ted-tech-tips" target="_blank">
-				<span class="sr-only">Check out my channel!</span>
+			<a class="youtube" href="https://www.youtube.com/@ted-tech-tips" target="_blank">
+				<span class="sr-only">Subscribe to Ted's channel</span>
 				<Icon name="mdi:youtube" class="icon" />
 			</a>
-			<a href="https://www.linkedin.com/in/ted-paek/" target="_blank">
+			<a class="linkedin" href="https://www.linkedin.com/in/ted-paek/" target="_blank">
 				<span class="sr-only">Connect with me!</span>
 				<Icon name="mdi:linkedin" class="icon" />
 			</a>
-			<a href="https://github.com/ted0526" target="_blank">
-				<span class="sr-only">Look at my github!</span>
+			<a class="github" href="https://github.com/ted0526" target="_blank">
+				<span class="sr-only">Go to Ted's GitHub repo</span>
 				<Icon name="mdi:github" class="icon" />
 			</a>
 		</div>
@@ -59,13 +59,17 @@ import { Icon } from 'astro-icon/components'
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+
+
 	.social-links,
 	.social-links a {
 		display: flex;
 		text-decoration: none;
     	color: rgb(var(--gray)); /* icon inherits this */
 	}
-	
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
 	.social-links a:hover .icon {
 		transform: scale(1.1);
 	}
@@ -75,6 +79,7 @@ import { Icon } from 'astro-icon/components'
 			display: none;
 		}
 	}
+
 	.icon {
 		width: 32px;
 		height: 32px;

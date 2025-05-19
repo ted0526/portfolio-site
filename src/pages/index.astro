@@ -1,36 +1,179 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Icon } from 'astro-icon/components';
+import GhCalendar  from "../components/GhCalendar.jsx";
+
 ---
 
 <Layout>
-	<h1>🧑‍🚀 Hello, I'm Ted!</h1>
-	<p>
-		Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-		template serves as a lightweight, minimally-styled starting point for anyone looking to build
-		a personal website, blog, or portfolio with Astro.
-	</p>
-	<p>
-		This template comes with a few integrations already configured in your
-		<code>astro.config.mjs</code> file. You can customize your setup with
-		<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-		React, or Vue to your project.
-	</p>
-	<p>Here are a few ideas on how to get started with the template:</p>
-	<ul>
-		<li>Edit this page in <code>src/pages/index.astro</code></li>
-		<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-		<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-		<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-		<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-	</ul>
-	<p>
-		Have fun! If you get stuck, remember to
-		<a href="https://docs.astro.build/">read the docs</a>
-		or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-	</p>
-	<p>
-		Looking for a blog template with a bit more personality? Check out
-		<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-		by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-	</p>
+  <section class="home-hero full-bleed">
+    <div class="inner">
+      <span class="home-emoji" aria-hidden="true">🧸</span>
+      <h1>Hello, I’m <b>Ted</b>!</h1>
+      <p>
+        I'm a computer engineer and tech enthusiast, turning even the most mundane
+        ideas into clean, functional prototypes. This site is the culmination of
+        my work—showcasing my projects, skills, and accomplishments.
+      </p>
+      <nav class="home-nav">
+        <a href="/projects" class="btn">Projects</a>
+        <a href="/about" class="btn secondary">About &amp; Resume</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="skills-section full-bleed">
+    <div class="inner">
+      <h2>My Skills</h2>
+      <ul class="skills-grid">
+        <li><Icon name="mdi:language-javascript" class="icon" /><span>JavaScript</span></li>
+        <li><Icon name="mdi:language-typescript" class="icon" /><span>TypeScript</span></li>
+        <li><Icon name="mdi:snail" class="icon" /><span>Astro</span></li>
+        <li><Icon name="mdi:react" class="icon" /><span>React</span></li>
+        <li><Icon name="mdi:nodejs" class="icon" /><span>Node.js</span></li>
+        <li><Icon name="mdi:language-html5" class="icon" /><span>HTML5</span></li>
+        <li><Icon name="mdi:language-css3" class="icon" /><span>CSS3</span></li>
+        <li><Icon name="mdi:git" class="icon" /><span>Git</span></li>
+      </ul>
+    </div>
+  </section>
+
+	<section class="calendar-section full-bleed">
+		<div class="inner">
+		<h2>GitHub Contributions</h2>
+		<!-- Render React calendar client-side -->
+		<GhCalendar
+			client:only="react"
+			username="ted0526"
+			blockSize={10}
+			blockMargin={3}
+			fontSize={16}
+      	/>
+		</div>
+	</section>
 </Layout>
+
+<style>
+  .full-bleed {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    padding: 4rem 0;
+  }
+
+  .full-bleed .inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .home-hero.full-bleed,
+  .calendar-section.full-bleed {
+    background-color: white;
+  }
+  .skills-section.full-bleed {
+    background-color: #f9fafb;
+  }
+
+  .home-emoji {
+    display: block;
+    font-size: 10rem;
+    margin-bottom: 1rem;
+  }
+  .home-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  .home-hero p {
+    font-size: 1.125rem;
+    color: rgb(var(--gray-dark));
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .home-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 200ms ease;
+  }
+  .btn:hover {
+    background: var(--accent-dark);
+  }
+  .btn.secondary {
+    background: rgb(var(--gray-light));
+    color: rgb(var(--black));
+  }
+  .btn.secondary:hover {
+    background: rgb(var(--gray));
+    color: white;
+  }
+
+  /* Skills grid */
+  .skills-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .skills-grid li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-grid .icon {
+    width: 40px;
+    height: 40px;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .skills-grid span {
+    font-size: 0.9rem;
+    color: rgb(var(--gray-dark));
+  }
+
+  /* Calendar image */
+  .calendar-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  .gh-calendar {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 720px;
+  }
+
+  @media (max-width: 480px) {
+    .skills-grid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    .skills-grid .icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+</style>

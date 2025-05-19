@@ -62,7 +62,14 @@ import { Icon } from 'astro-icon/components'
 	.social-links,
 	.social-links a {
 		display: flex;
+		text-decoration: none;
+    	color: rgb(var(--gray)); /* icon inherits this */
 	}
+	
+	.social-links a:hover .icon {
+		transform: scale(1.1);
+	}
+
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
@@ -72,6 +79,16 @@ import { Icon } from 'astro-icon/components'
 		width: 32px;
 		height: 32px;
 		color: currentColor;
+	    transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+  	}
+	.social-links a.youtube:hover .icon {
+		color: #FF0000;         /* YouTube red */
+	}
+	.social-links a.linkedin:hover .icon {
+		color: #0077B5;         /* LinkedIn blue */
+	}
+	.social-links a.github:hover .icon {
+		color: #000000;         /* GitHub black */
 	}
 </style>
 

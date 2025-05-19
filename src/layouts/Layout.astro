@@ -1,8 +1,9 @@
 ---
-import { ClientRouter } from "astro:transitions";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import BaseHead from "../components/BaseHead.astro";
+// src/layouts/Layout.astro
+import { ClientRouter } from 'astro:transitions';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -10,17 +11,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <!-- Opt in to client-side routing for view transitions site-wide -->
+    <ClientRouter />  <!-- :contentReference[oaicite:0]{index=0} -->
   </head>
-
   <body>
     <Header />
-    <!-- <ClientRouter> -->
-      <main view-transition="page">
-        <slot />
-      </main>
-    <!-- </ClientRouter> -->
+
+    <!--
+      Use the built-in “slide” animation on your main content.
+      Astro supports: fade (default), initial, slide, none. 
+    -->
+    <main transition:animate="slide">
+      <slot />
+    </main>  <!-- :contentReference[oaicite:1]{index=1} -->
+
     <Footer />
   </body>
-
-
 </html>

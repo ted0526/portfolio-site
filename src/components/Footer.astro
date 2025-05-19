@@ -6,27 +6,28 @@ import { Icon } from 'astro-icon/components'
 <footer>
 	&copy; {today.getFullYear()} Ted Paek. All rights reserved.
 	<div class="social-links">
-		<a href="https://www.youtube.com/@ted-tech-tips" target="_blank">
+		<a class="youtube" href="https://www.youtube.com/@ted-tech-tips" target="_blank">
 			<span class="sr-only">Subscribe to Ted's channel</span>
 			<Icon name="mdi:youtube" class="icon" />
 		</a>
-		<a href="https://www.linkedin.com/in/ted-paek/" target="_blank">
+		<a class="linkedin" href="https://www.linkedin.com/in/ted-paek/" target="_blank">
 			<span class="sr-only">Connect with me!</span>
 			<Icon name="mdi:linkedin" class="icon" />
 		</a>
-		<a href="https://github.com/ted0526" target="_blank">
+		<a class="github" href="https://github.com/ted0526" target="_blank">
 			<span class="sr-only">Go to Ted's GitHub repo</span>
 			<Icon name="mdi:github" class="icon" />
 		</a>
 	</div>
 </footer>
+
 <style>
-	footer {
+  	footer {
 		padding: 2em 1em 6em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
-	}
+  	}
 	.social-links {
 		display: flex;
 		justify-content: center;
@@ -35,14 +36,29 @@ import { Icon } from 'astro-icon/components'
 	}
 	.social-links a {
 		text-decoration: none;
-		color: rgb(var(--gray));
+		color: rgb(var(--gray)); /* icon inherits this */
 	}
 	.social-links a:hover {
 		color: rgb(var(--gray-dark));
 	}
+
 	.icon {
 		width: 32px;
 		height: 32px;
 		color: currentColor;
+		transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+	}
+	
+	.social-links a:hover .icon {
+		transform: scale(1.1);
+	}
+	.social-links a.youtube:hover .icon {
+		color: #FF0000;         /* YouTube red */
+	}
+	.social-links a.linkedin:hover .icon {
+		color: #0077B5;         /* LinkedIn blue */
+	}
+	.social-links a.github:hover .icon {
+		color: #000000;         /* GitHub black */
 	}
 </style>

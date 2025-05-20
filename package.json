@@ -20,10 +20,12 @@
     "astro": "^5.7.13",
     "astro-icon": "^1.1.5",
     "react": "^19.1.0",
+    "react-activity-calendar": "^2.7.12",
     "react-dom": "^19.1.0",
     "react-github-calendar": "^4.5.7"
   },
   "devDependencies": {
-    "@iconify-icons/line-md": "^1.2.30"
+    "@iconify-icons/line-md": "^1.2.30",
+    "@iconify-json/simple-icons": "^1.2.34"
   }
 }

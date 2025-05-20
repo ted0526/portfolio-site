@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from 'astro-icon/components';
-import GhCalendar  from "../components/GhCalendar.jsx";
+import GhCalendar  from "../components/GhCalendar.tsx";
 
 ---
 
@@ -17,24 +17,89 @@ import GhCalendar  from "../components/GhCalendar.jsx";
       </p>
       <nav class="home-nav">
         <a href="/projects" class="btn">Projects</a>
-        <a href="/about" class="btn secondary">About &amp; Resume</a>
+        <a href="/resume" class="btn secondary">Resume</a>
       </nav>
     </div>
   </section>
 
-  <section class="skills-section full-bleed">
+<section class="skills-section full-bleed">
+  <div class="inner">
+    <h2>My Skills</h2>
+    <div class="skills-cards">
+      
+      <!-- Web Dev Card -->
+      <div class="skills-card">
+        <h3>Web Dev</h3>
+        <ul>
+          <li><Icon name="mdi:language-javascript" class="icon"/><span>JavaScript</span></li>
+          <li><Icon name="mdi:language-typescript" class="icon"/><span>TypeScript</span></li>
+          <li><Icon name="simple-icons:astro" class="icon"/><span>Astro</span></li>
+          <li><Icon name="mdi:react" class="icon"/><span>React</span></li>
+          <li><Icon name="mdi:nodejs" class="icon"/><span>Node.js</span></li>
+          <li><Icon name="mdi:language-html5" class="icon"/><span>HTML5</span></li>
+          <li><Icon name="mdi:language-css3" class="icon"/><span>CSS3</span></li>
+        </ul>
+      </div>
+
+      <!-- Embedded Systems Card -->
+      <div class="skills-card">
+        <h3>Embedded Systems</h3>
+        <ul>
+          <li><Icon name="simple-icons:arduino" class="icon"/><span>Arduino</span></li>
+          <li><Icon name="mdi:raspberry-pi" class="icon"/><span>Raspberry Pi</span></li>
+          <li><Icon name="mdi:cpu-64-bit" class="icon"/><span>Microcontrollers</span></li>
+          <li><Icon name="mdi:chip" class="icon"/><span>FPGAs</span></li>
+          <li><Icon name="mdi:memory" class="icon"/><span>RAM & Storage</span></li>
+          <li><Icon name="mdi:swap-horizontal" class="icon"/><span>I²C • SPI • UART • More</span></li>
+        </ul>
+      </div>
+
+      <!-- Programming Card -->
+      <div class="skills-card">
+        <h3>Programming</h3>
+        <ul>
+          <li><Icon name="mdi:language-python" class="icon"/><span>Python</span></li>
+          <li><Icon name="mdi:code-tags" class="icon"/><span>C / C++</span></li>
+          <li><Icon name="mdi:git" class="icon"/><span>Git</span></li>
+          <li><Icon name="mdi:docker" class="icon"/><span>Docker</span></li>
+          <li><Icon name="mdi:aws" class="icon"/><span>AWS</span></li>
+          <li><Icon name="mdi:kubernetes" class="icon"/><span>Kubernetes</span></li>
+          <li><Icon name="simple-icons:latex" class="icon"/><span>LaTeX</span></li>
+          <li><Icon name="mdi:language-markdown-outline" class="icon"/><span>Markdown</span></li>
+        </ul>
+      </div>
+
+      <!-- Maker Skills Card -->
+      <div class="skills-card">
+        <h3>Maker Skills</h3>
+        <ul>
+          <li><Icon name="mdi:printer-3d-nozzle" class="icon"/><span>3D Printing</span></li>
+          <li><Icon name="simple-icons:autodesk" class="icon"/><span>3D Design (Fusion 360)</span></li>
+          <li><Icon name="simple-icons:kicad" class="icon"/><span>PCB Design (KiCad)</span></li>
+          <li><Icon name="mdi:soldering-iron" class="icon"/><span>Soldering</span></li>
+          <li><Icon name="mdi:sine-wave" class="icon"/><span>Oscilloscope & Logic Analyzer</span></li>
+          <li><Icon name="mdi:laser-pointer" class="icon"/><span>Laser Cutting</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <section class="stats-section full-bleed">
     <div class="inner">
-      <h2>My Skills</h2>
-      <ul class="skills-grid">
-        <li><Icon name="mdi:language-javascript" class="icon" /><span>JavaScript</span></li>
-        <li><Icon name="mdi:language-typescript" class="icon" /><span>TypeScript</span></li>
-        <li><Icon name="mdi:snail" class="icon" /><span>Astro</span></li>
-        <li><Icon name="mdi:react" class="icon" /><span>React</span></li>
-        <li><Icon name="mdi:nodejs" class="icon" /><span>Node.js</span></li>
-        <li><Icon name="mdi:language-html5" class="icon" /><span>HTML5</span></li>
-        <li><Icon name="mdi:language-css3" class="icon" /><span>CSS3</span></li>
-        <li><Icon name="mdi:git" class="icon" /><span>Git</span></li>
-      </ul>
+      <h2>Highlights</h2>
+      <div class="stats-cards">
+        <div class="stat-card">
+          <div class="stat-title">Internship @ Leidos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">TA for Discrete Math</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">1st Place: ECE Best Project</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -42,14 +107,17 @@ import GhCalendar  from "../components/GhCalendar.jsx";
 		<div class="inner">
 		<h2>GitHub Contributions</h2>
 		<!-- Render React calendar client-side -->
+    <div class = "calendarbox">
 		<GhCalendar
 			client:only="react"
 			username="ted0526"
-			blockSize={10}
+			blockSize={15}
+      blockRadius={5}
 			blockMargin={3}
 			fontSize={16}
       	/>
 		</div>
+    </div>
 	</section>
 </Layout>
 
@@ -65,20 +133,108 @@ import GhCalendar  from "../components/GhCalendar.jsx";
   }
 
   .full-bleed .inner {
-    max-width: 720px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 1rem;
     text-align: center;
   }
 
-  .home-hero.full-bleed,
-  .calendar-section.full-bleed {
-    background-color: white;
-  }
-  .skills-section.full-bleed {
-    background-color: #f9fafb;
+    /* Make .home-hero the stacking context */
+  .home-hero {
+    position: relative;
+    overflow: hidden;    /* keep the pseudo clipped */
   }
 
+  /* Only .home-hero gets the faint pattern */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;                                 /* cover the full hero */
+    background: url('/patterns/footer-pattern.svg') repeat;
+    opacity: 0.03;
+    pointer-events: none;                     /* clicks pass through */
+    z-index: 1;
+  }
+
+  /* Push all real hero‐section children above the pattern */
+  .home-hero > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .home-hero.full-bleed,
+  .stats-section.full-bleed {
+    background-color: white;
+  }
+
+  .skills-section.full-bleed,
+  .calendar-section.full-bleed {
+    background-color: rgb(var(--gray-light));
+  }
+ .skills-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .calendarbox {
+    display: flex;
+    justify-content: center;
+  
+    background-color: white;   
+    padding: 1.5rem;            
+    border-radius: 0.75rem;   
+    box-shadow: var(--box-shadow); 
+    margin: 0 auto;        
+    text-align: center;           
+  }
+
+  .skills-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+  }
+
+  .skills-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: rgb(var(--black));
+  }
+
+  .skills-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .skills-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    justify-content: center;
+  }
+
+  .skills-card .icon {
+    width: 28px;
+    height: 28px;
+    color: var(--accent);
+  }
+
+  .skills-card span {
+    font-size: 0.9rem;
+    color: rgb(var(--gray-dark));
+  }
+
+  @media (max-width: 480px) {
+    .skills-card .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
   .home-emoji {
     display: block;
     font-size: 10rem;
@@ -160,7 +316,7 @@ import GhCalendar  from "../components/GhCalendar.jsx";
     display: block;
     margin: 1rem auto;
     padding: 1rem;
-    background: white;
+    background-color: white;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
     width: 100%;
@@ -174,6 +330,43 @@ import GhCalendar  from "../components/GhCalendar.jsx";
     .skills-grid .icon {
       width: 32px;
       height: 32px;
+    }
+  }
+  /*stat highlights*/
+    .stats-section .inner h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--black));
+  }
+  .stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+  }
+  .stat-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .stat-desc {
+    margin-top: 0.5rem;
+    color: rgb(var(--gray-dark));
+    font-size: 0.95rem;
+  }
+  @media (max-width: 480px) {
+    .stat-title {
+      font-size: 1.25rem;
+    }
+    .stat-desc {
+      font-size: 0.9rem;
     }
   }
 </style>

@@ -1,0 +1,21 @@
+.resume-container {
+  /* keep your new wider width */
+  max-width: 1080px;
+  width: min(90%, 1080px);
+  margin: 3rem auto;
+  padding: 0 1rem;
+
+  font-size: 1.1rem;
+
+  line-height: 1.6;
+}
+
+.resume-container h1 {
+  font-size: 2.5rem;
+}
+.resume-container h2 {
+  font-size: 2rem;
+}
+.resume-container h3 {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResumeContent from '../content/resume.md';
+import '../styles/resume.css';
+
+export const title = 'Resume | Ted Paek';
+export const description = 'My resume.';
+---
+
+<Layout {title} {description}>
+    <div class="resume-container">
+        <ResumeContent />
+    </div>
+</Layout>

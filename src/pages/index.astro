@@ -9,16 +9,87 @@ import GhCalendar  from "../components/GhCalendar.tsx";
   <section class="home-hero full-bleed">
     <div class="inner">
       <span class="home-emoji" aria-hidden="true">🧸</span>
-      <h1>Hello, I’m <b>Ted</b>!</h1>
+      <h1>Hello, I'm <b>Ted</b>!</h1>
       <p>
-        I'm a computer engineer and tech enthusiast, turning even the most mundane
-        ideas into clean, functional prototypes. This site is the culmination of
-        my work—showcasing my projects, skills, and accomplishments.
+        I'm a computer engineer from Georgia Tech and tech enthusiast, turning even the most mundane
+        ideas into clean, functional prototypes. I'm interested in anything related to computers: architecture, software, hardware, cybersecurity, and more.
+        This site is the culmination of my work, showcasing my projects, skills, and accomplishments.
       </p>
       <nav class="home-nav">
         <a href="/portfolio-site/projects" class="btn">Projects</a>
         <a href="/portfolio-site/resume" class="btn secondary">Resume</a>
       </nav>
+    </div>
+  </section>
+
+
+<!-- HIGHLIGHTS SECTION -->
+  <section class="stats-section full-bleed">
+    <div class="inner">
+      <h2>Highlights</h2>
+      
+        <div class="stats-cards">
+
+          <!-- Leidos Internship -->
+          <div class="stat-card">
+            <div class="stat-title">Internship @ Leidos</div>
+            <ul class="stat-body">
+              <li class="stat-item">
+                <span class="stat-number">9+</span>
+                <span class="stat-text">months full-stack development + systems experience</span>
+              </li>
+              <li class="stat-item">
+                <span class="stat-number checkmark">✓</span>
+                <span class="stat-text">gained DOD security clearance</span>
+              </li>
+            </ul>
+            <div class="stat-footer">
+              <div class="stat-logo">
+                <img src="/portfolio-site/assets/logos/leidos-logo.svg" alt="Leidos logo" />
+              </div>
+            </div>
+          </div>
+
+          <!-- TA for Discrete Math -->
+          <div class="stat-card">
+            <div class="stat-title">TA for Discrete Math</div>
+            <ul class="stat-body">
+              <li class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-text">years supporting coursework</span>
+              </li>
+              <li class="stat-item">
+                <span class="stat-number">1,000+</span>
+                <span class="stat-text">students instructed</span>
+              </li>
+            </ul>
+            <div class="stat-footer">
+              <div class="stat-logo">
+                <img src="/portfolio-site/assets/logos/gt-coc-logo.svg" alt="GT College of Computing logo" />
+              </div>
+            </div>
+          </div>
+
+          <!-- ECE Best Project -->
+          <div class="stat-card">
+            <div class="stat-title">ECE Best Project</div>
+            <ul class="stat-body">
+              <li class="stat-item">
+                <span class="stat-number">1st</span>
+                <span class="stat-text">place in departmental design competition</span>
+              </li>
+            </ul>
+            <div class="stat-footer">
+              <a class="btn secondary" href="https://ece.gatech.edu/news/…" target="_blank" rel="noopener">
+                Read more
+              </a>
+              <div class="stat-logo">
+                <img src="/portfolio-site/assets/logos/gt-ece-logo.svg" alt="GT ECE logo" />
+              </div>
+            </div>
+          </div>
+
+      </div>
     </div>
   </section>
 
@@ -37,14 +108,15 @@ import GhCalendar  from "../components/GhCalendar.tsx";
           <li><Icon name="mdi:react" class="icon"/><span>React</span></li>
           <li><Icon name="mdi:nodejs" class="icon"/><span>Node.js</span></li>
           <li><Icon name="mdi:language-html5" class="icon"/><span>HTML5</span></li>
-          <li><Icon name="mdi:language-css3" class="icon"/><span>CSS3</span></li>
+          <li><Icon name="mdi:language-css3" class="icon"/><span>CSS3 • More</span></li>
         </ul>
       </div>
 
       <!-- Embedded Systems Card -->
       <div class="skills-card">
-        <h3>Embedded Systems</h3>
+        <h3>HW &amp Embedded Systems</h3>
         <ul>
+          <li><Icon name="mdi:integrated-circuit-chip" class="icon"/><span>VLSI + Digital Design</span></li>
           <li><Icon name="simple-icons:arduino" class="icon"/><span>Arduino</span></li>
           <li><Icon name="mdi:raspberry-pi" class="icon"/><span>Raspberry Pi</span></li>
           <li><Icon name="mdi:cpu-64-bit" class="icon"/><span>Microcontrollers</span></li>
@@ -65,7 +137,7 @@ import GhCalendar  from "../components/GhCalendar.tsx";
           <li><Icon name="mdi:aws" class="icon"/><span>AWS</span></li>
           <li><Icon name="mdi:kubernetes" class="icon"/><span>Kubernetes</span></li>
           <li><Icon name="simple-icons:latex" class="icon"/><span>LaTeX</span></li>
-          <li><Icon name="mdi:language-markdown-outline" class="icon"/><span>Markdown</span></li>
+          <li><Icon name="mdi:language-markdown-outline" class="icon"/><span>Markdown • More</span></li>
         </ul>
       </div>
 
@@ -78,30 +150,13 @@ import GhCalendar  from "../components/GhCalendar.tsx";
           <li><Icon name="simple-icons:kicad" class="icon"/><span>PCB Design (KiCad)</span></li>
           <li><Icon name="mdi:soldering-iron" class="icon"/><span>Soldering</span></li>
           <li><Icon name="mdi:sine-wave" class="icon"/><span>Oscilloscope & Logic Analyzer</span></li>
-          <li><Icon name="mdi:laser-pointer" class="icon"/><span>Laser Cutting</span></li>
+          <li><Icon name="mdi:laser-pointer" class="icon"/><span>Laser Cutting • More</span></li>
         </ul>
       </div>
 
     </div>
   </div>
 </section>
-
-  <section class="stats-section full-bleed">
-    <div class="inner">
-      <h2>Highlights</h2>
-      <div class="stats-cards">
-        <div class="stat-card">
-          <div class="stat-title">Internship @ Leidos</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-title">TA for Discrete Math</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-title">1st Place: ECE Best Project</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 	<section class="calendar-section full-bleed">
 		<div class="inner">
@@ -135,6 +190,7 @@ import GhCalendar  from "../components/GhCalendar.tsx";
   .full-bleed .inner {
     max-width: 1080px;
     margin: 0 auto;
+    margin-bottom: 0rem;
     padding: 0 1rem;
     text-align: center;
   }
@@ -163,11 +219,13 @@ import GhCalendar  from "../components/GhCalendar.tsx";
   }
 
   .home-hero.full-bleed,
-  .stats-section.full-bleed {
+  .skills-section.full-bleed
+   {
     background-color: white;
   }
 
-  .skills-section.full-bleed,
+  
+  .stats-section.full-bleed,
   .calendar-section.full-bleed {
     background-color: rgb(var(--gray-light));
   }
@@ -275,7 +333,7 @@ import GhCalendar  from "../components/GhCalendar.tsx";
   }
   .btn.secondary:hover {
     background: rgb(var(--gray));
-    color: white;
+    color: rgb(var(--gray-dark));
   }
 
   /* Skills grid */
@@ -343,24 +401,90 @@ import GhCalendar  from "../components/GhCalendar.tsx";
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
+    align-items: stretch;
   }
   .stat-card {
-    background: white;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
     padding: 1.5rem;
     border-radius: 0.75rem;
     box-shadow: var(--box-shadow);
-    text-align: center;
+    /* ensure it fills the grid cell */
+    height: auto;
   }
   .stat-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent);
+    margin-bottom: 1rem;
+
   }
-  .stat-desc {
-    margin-top: 0.5rem;
-    color: rgb(var(--gray-dark));
-    font-size: 0.95rem;
+
+  .stat-body {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    flex: 0 0 auto;
+
   }
+
+  /* Each item: number + text */
+  .stat-item {
+    display: flex;
+    flex-direction: column;    /* stack number above text */
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Prominent number */
+  .stat-number {
+    font-size: 3.5rem;            /* large size */
+    font-weight: 700;             /* bold */
+    line-height: 1;               /* tighten up vertical rhythm */
+    color: var(--accent-dark);    /* accent color for pop */
+  }
+
+  /* Supporting text */
+  .stat-text {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    color: var(--gray-dark);
+    text-align: center;
+  }
+
+  /* Footer wrapper holds both logo + button */
+  .stat-footer {
+    margin-top: auto;              /* ← push to bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* wrap your SVGs in a uniform box */
+  .stat-footer .stat-logo {
+    width: var(--stat-logo-box-width);
+    height: var(--stat-logo-box-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  /* then make each <img> scale to fit */
+  .stat-footer .stat-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 200px;
+    object-fit: contain;
+  }
+
+  /* (Optional) tweak spacing if a single item list needs centering */
+  .stat-card .stat-body:only-child .stat-item {
+    margin-bottom: 0;
+  }
+
   @media (max-width: 480px) {
     .stat-title {
       font-size: 1.25rem;

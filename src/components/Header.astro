@@ -6,7 +6,7 @@ import { Icon } from 'astro-icon/components'
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a href="/portfolio-site/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/portfolio-site/">Home</HeaderLink>
 			<HeaderLink href="/portfolio-site/projects">Projects</HeaderLink>
@@ -79,7 +79,9 @@ import { Icon } from 'astro-icon/components'
 			display: none;
 		}
 	}
-
+	.internal-links a:hover {
+		color: var(--accent-dark)
+	}
 	.icon {
 		width: 32px;
 		height: 32px;

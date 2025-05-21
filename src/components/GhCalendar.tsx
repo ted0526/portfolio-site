@@ -8,7 +8,7 @@ import type { ThemeInput } from 'react-activity-calendar';
 const minimalTheme: ThemeInput = {
   light: [
     "hsl(0, 0%, 100%)",
-    "#2337ff"
+    "var(--accent-dark)"
   ],
   dark: [
     "hsl(0, 0%, 22%)",

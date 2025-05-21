@@ -1,16 +1,56 @@
 ---
-title: 'Third post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 22 2022'
-heroImage: '/portfolio-site/blog-placeholder-2.jpg'
+title: 'Portfolio Website'
+description: 'Making portfolio website'
+pubDate: 'May 21 2025'
+heroImage: '/portfolio-site/portfolio.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Hello, this is the first entry for my projects page!
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+----
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+### Intro
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+I wanted to create a portfolio site to highlight my work and honestly to replace my old one from 1st year of college.
+For this website, I used Astro, a front-end framework that excels at generating static sites.
+I chose this because I want to make a static website (free hosting on github.io) that is content-driven.
+Astro allows me to write a simple markdown file and a template (.astro file) that applies to all my posts.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+I started with the Astro-provided blog template.
+So far, I have implemented a home page, navigation, social links, etc. Very basic UI stuff.
+I also added reactJS for the [GitHub calendar component](https://www.npmjs.com/package/react-github-calendar).
+
+This project is currently located on my [GitHub repo](https://github.com/ted0526/portfolio-site).
+
+I want to document **all** my projects from 3D printing, web development, coursework, and more as well as maintain my resume. 
+
+The resume tab is also written in markdown, which makes it extremely easy to export into any file format but I also have version history on my resume :) which is pretty cool.
+
+---
+
+### Tools
+
+So far, here are the tools I've used:
+- [AstroJS](https://astro.build/)
+- [ReactJS](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React GitHub Calendar](https://www.npmjs.com/package/react-github-calendar)
+- [@iconify/json](https://www.npmjs.com/package/@iconify/json)
+    - [mdi](https://pictogrammers.com/library/mdi/)
+    - [simpleicons](https://simpleicons.org/)
+- [MDX](https://mdxjs.com/)/[MD](https://www.markdownguide.org/)
+
+So overall, it is quite light-weight and extremely easy to deploy with Astro's built in GitHub support.
+
+---
+
+### Planned Features (TO-DO)
+
+I want to add more functionality and UI tweaks as I develop the site further. I'm pretty happy with the state it is in right now, but as I add more content, I plan to implement some more things.
+
+- Better file structure for images. Right now, they're all stored in my public directory, which works but it might be better to use an S3 bucket or atleast an actual directory structure.
+- Along a similar vein, I would like to sort or tag each post by genre or tools used or smth like that.
+    - Maybe a search tool like [Lunr.js](https://lunrjs.com/)
+- Even though this site is designed for static performance in mind and I have no issues with deployment, I may want to connect an actual domain later.
+- 404 Page
+- Learn [Framer Motion](https://motion.dev/) for some more eye candy

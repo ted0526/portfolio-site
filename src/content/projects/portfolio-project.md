@@ -2,7 +2,7 @@
 title: 'Portfolio Website'
 description: 'Making portfolio website'
 pubDate: 'May 21 2025'
-heroImage: '/portfolio-site/portfolio.jpg'
+heroImage: '/portfolio-site/media/portfolio.jpg'
 ---
 
 Hello, this is the first entry for my projects page!
